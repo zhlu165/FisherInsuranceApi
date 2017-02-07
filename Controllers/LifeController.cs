@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 
 namespace FisherInsuranceApi.Controllers {
-[Route("api/auto/quotes")]
-public class AutoController : Controller
+[Route("api/life/quotes")]
+public class LifeController : Controller
 {
-// POST api/auto/quotes 
+// POST api/life/quotes 
         
         [HttpPost] 
         public IActionResult Post([FromBody]string value) 
@@ -12,22 +12,22 @@ public class AutoController : Controller
             return Created("", value); 
         }
 
-// GET api/auto/quotes/5
+// GET api/life/quotes/5
         [HttpGet("{id}")]
         public IActionResult Get(int id) {
             return Ok("The id is: " + id);
         }
 
-// PUT api/auto/quotes/id
+// PUT api/life/quotes/id
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody]string value) {
             return NoContent();
         }
 
-// DELETE api/auto/quotes/id
+// DELETE api/life/quotes/id
         [HttpDelete("{id}")]
         public IActionResult Delete(int id) {
-        return Delete(id);
+            return Delete(id);
         }
 
 }}
