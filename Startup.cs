@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using FisherInsuranceApi.Data;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FisherInsuranceApi
 {
@@ -28,6 +30,7 @@ namespace FisherInsuranceApi
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddSingleton<IMemoryStore, MemoryStore>();
             services.AddMvc();
         }
 
@@ -39,5 +42,6 @@ namespace FisherInsuranceApi
 
             app.UseMvc();
         }
+
     }
 }
