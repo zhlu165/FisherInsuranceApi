@@ -1,5 +1,5 @@
 using System;
-namespace FisherInsuranceApi.QuoteModel
+namespace FisherInsuranceApi.Models
  
 {
     public class Quote
