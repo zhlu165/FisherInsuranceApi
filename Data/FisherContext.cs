@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using FisherInsuranceApi.Models;
 namespace FisherInsuranceApi.Data
 {
-public class FisherContext : DbContext
+public class FisherContext : IdentityDbContext<ApplicationUser>
  {
      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
      string connection = "User ID=fisher-user;Password=hanJxifan ;Host=localhost;Port=5432;Database=fisher-insurance;Pooling=true;";
